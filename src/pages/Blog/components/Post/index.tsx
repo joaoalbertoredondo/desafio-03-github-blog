@@ -1,5 +1,7 @@
-function Posts() {
-  return <div>Posts</div>;
+import { PostContainer } from "./styles";
+
+function Post() {
+  return <PostContainer>Post</PostContainer>;
 }
 
-export default Posts;
+export default Post;
