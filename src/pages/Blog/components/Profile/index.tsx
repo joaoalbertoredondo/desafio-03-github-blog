@@ -35,7 +35,7 @@ function Profile() {
           </li>
           <li>
             <FaUserGroup size={18} />
-            32 Seguidores
+            23 Seguidores
           </li>
         </ul>
       </ProfileDetails>
