@@ -12,9 +12,11 @@ export const ProfileContainer = styled.section`
 `;
 
 export const ProfilePicture = styled.div`
-  width: 148px;
-  height: 148px;
-  border-radius: 8px;
+  img {
+    width: 148px;
+    height: 148px;
+    border-radius: 8px;
+  }
 `;
 
 export const ProfileDetails = styled.div`

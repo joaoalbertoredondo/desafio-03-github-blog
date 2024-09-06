@@ -1,13 +1,5 @@
 import styled from "styled-components";
 
-export const PostContainer = styled.div`
-  margin-top: 48px;
-  margin-bottom: 234px;
-
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 2rem;
-`;
 
 export const Card = styled.div`
   padding: 2rem;
@@ -45,5 +37,11 @@ export const Card = styled.div`
     -webkit-line-clamp: 4;
     line-clamp: 4;
     -webkit-box-orient: vertical;
+
+    text-align: justify;
+  }
+
+  a {
+    text-decoration: none;
   }
 `;

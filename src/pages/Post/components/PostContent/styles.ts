@@ -10,6 +10,10 @@ export const PostContentContainer = styled.div`
   display: flex;
   flex-direction: column;
 
+  p {
+    text-align: justify;
+  }
+
   section {
     margin-bottom: 24px;
   }
