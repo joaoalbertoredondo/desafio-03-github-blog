@@ -5,16 +5,25 @@ import { FaCalendarDay, FaComment, FaGithub } from "react-icons/fa";
 import { IPost } from "../../../Blog";
 import { formatDistanceToNow } from "date-fns";
 import { ptBR } from "date-fns/locale/pt-BR";
+import { useEffect, useState } from "react";
 
 interface PostHeaderProps {
   postData: IPost;
 }
 
 function PostHeader({ postData }: PostHeaderProps) {
-  const formattedDate = formatDistanceToNow(new Date(postData.created_at), {
-    locale: ptBR,
-    addSuffix: true,
-  });
+  const [formattedDate, setFormattedDate] = useState("");
+
+  useEffect(() => {
+    setFormattedDate(
+      postData?.created_at
+        ? formatDistanceToNow(new Date(postData.created_at), {
+            locale: ptBR,
+            addSuffix: true,
+          })
+        : ""
+    );
+  }, [postData.created_at]);
 
   return (
     <PostHeaderContainer>
@@ -34,11 +43,11 @@ function PostHeader({ postData }: PostHeaderProps) {
         <ul>
           <li>
             <FaGithub size={18} />
-            {postData.user.login}
+            {postData?.user?.login || ""}
           </li>
           <li>
             <FaCalendarDay size={18} />
-            {formattedDate}
+            {formattedDate || ""}
           </li>
           <li>
             <FaComment size={18} />
